@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Livros</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Publication Date</th>
+                <th>Author</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in books %}
+            <tr>
+                <td>{{ book.title }}</td>
+                <td>{{ book.publication_date }}</td>
+                <td>{{ book.author }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
